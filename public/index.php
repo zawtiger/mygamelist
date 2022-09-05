@@ -9,6 +9,8 @@ ini_set('display_errors', 'Off'); // log to screen (no)
 //Session can conveniently start with every page
 session_start();
 
+require __DIR__ . '/vendor/autoload.php';
+
 //Autoload classes using the Standard PHP Library function for classes, controllers, views, and model
 spl_autoload_register(function($class) {
     include '../classes/' . $class . '.php';
@@ -24,6 +26,10 @@ spl_autoload_register(function($class) {
 
 spl_autoload_register(function($class) {
     include '../Model/' . $class . '.php';
+});
+
+spl_autoload_register(function($class) {
+    include '../Ajax/' . $class . '.php';
 });
 
 //Include routes

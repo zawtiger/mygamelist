@@ -1,11 +1,10 @@
 <?php
 
 //Creating routes because we want to be able to scale in the future.
-
 Route::set('index.php',function() {
-  $P = new Welcome;
-  $P->page_title = "Welcome";
-  $P->CreateView('Welcome');
+  $P = new MyGameList;
+  $P->page_title = "My Game List";
+  $P->CreateView('MyGameList');
 });
 
 // AJAX ===========

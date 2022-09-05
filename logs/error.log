@@ -1,0 +1,33 @@
+[05-Sep-2022 12:16:17 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:16:18 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:16:19 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:16:19 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:16:19 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:16:27 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:16:27 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:16:27 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:17:07 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:28:59 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '}', expecting ';' in /home/mygamelist/Controllers/MyGameList.php on line 85
+[05-Sep-2022 12:30:13 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:32:26 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:34:07 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:37:25 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:38:40 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:42:46 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:43:05 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:43:49 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:49:22 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:49:27 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:58:42 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:58:57 America/Los_Angeles] PHP Deprecated:  Non-static method Controller::CreateView() should not be called statically in /home/mygamelist/public/Routes.php on line 14
+[05-Sep-2022 12:58:57 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined method AjMyGameList::save_game_list() in /home/mygamelist/Ajax/AjMyGameList.php:40
+Stack trace:
+#0 /home/mygamelist/Views/AjaxView.php(5): AjMyGameList->get_json()
+#1 /home/mygamelist/Controllers/Controller.php(7): require_once('/home/mygamelis...')
+#2 /home/mygamelist/public/Routes.php(14): Controller::CreateView()
+#3 /home/mygamelist/classes/Route.php(9): {closure}()
+#4 /home/mygamelist/classes/Route.php(9): Closure->__invoke()
+#5 /home/mygamelist/public/Routes.php(15): Route::set()
+#6 /home/mygamelist/public/index.php(36): require_once('/home/mygamelis...')
+#7 {main}
+  thrown in /home/mygamelist/Ajax/AjMyGameList.php on line 40

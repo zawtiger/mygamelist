@@ -1,7 +1,9 @@
 <?php
 
-final class Query extends DatabaseConfig
+class Query extends DatabaseConfig
 {
+
+  public $mySQLerrorInfo;
 
   function connect(){
 
@@ -35,6 +37,15 @@ final class Query extends DatabaseConfig
     $stmt->execute($prep);
     return $stmt->errorInfo();
                 //$stmt->errorCode(); // 1062 Duplicate error
-    }
+  }
+
+  public function setQuery($sql,$prep){
+    $stmt = $this->connect()->prepare($sql);
+    $stmt->execute($prep);
+
+    $this->mySQLerrorInfo = $stmt->errorInfo(); // 1062 Duplicate error
+
+    return $stmt->rowCount();
+  }
 
 }

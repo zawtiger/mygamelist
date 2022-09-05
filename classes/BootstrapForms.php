@@ -1,6 +1,8 @@
 <?php
 
-class BootstrapFroms {
+//Premade to make form items easier to load and customize if using Bootstrap
+
+class BootstrapForms {
 
   public $label = "";
   public $id = "";
@@ -65,20 +67,14 @@ class BootstrapFroms {
   }
 
 
-  public function radio_buttons(){
+  public function radio_buttons()
+  {
 
-    if(!$this->button_css){ $this->button_css = "btn-primary"; }
-
-    $html .= "<div class=\"btn-group btn-group-toggle\" data-toggle=\"buttons\">";
-
-      foreach($this->drop_options AS $value => $label){
-        if($this->inVar == $value){ $checked = "checked"; $active = "active"; } else { $checked = ""; $active = ""; }
-
-        $html .= "
-        <label class=\"btn {$this->button_css} $active}\" for=\"{$this->id}_{$value}\" onclick=\"$('#{$this->id}').val('{$value}'); {$this->function}\">
-          <input type=\"radio\" value=\"{$value}\" id=\"{$this->id}_{$value}\" {$checked} > {$label}
-        </label>";
-      }
+    $html .= "<div class=\"btn-group me-2\" role=\"group\">";
+    foreach($this->drop_options AS $b){
+      $html .= "<input type=\"radio\" class=\"btn-check\" name=\"{$this->id}\" id=\"{$this->id}_{$b}\" value=\"{$b}\" autocomplete=\"off\">
+        <label class=\"btn btn-outline-secondary btn-sm\" for=\"{$this->id}_{$b}\">{$b}</label>";
+    }
     $html .= "</div>";
 
     return $html;
