@@ -10,7 +10,6 @@ ini_set('display_errors', 'Off'); // log to screen (no)
 session_start();
 
 //Autoload classes using the Standard PHP Library function for classes, controllers, views, and model
-
 spl_autoload_register(function($class) {
     include '../classes/' . $class . '.php';
 });
