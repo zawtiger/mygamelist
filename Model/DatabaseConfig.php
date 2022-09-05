@@ -1,10 +1,12 @@
 <?php
 
+//mySQL Database Configuration
+
 class DatabaseConfig
 {
   const
-  DB_HOST = 'your host',
-  DB_NAME = 'your database name',
-  DB_USER = 'your user name',
-  DB_PASS = 'your database password';
+  DB_HOST = '', // your host
+  DB_NAME = '', // your database name
+  DB_USER = '', // your user name
+  DB_PASS = '' // your database password
 }
