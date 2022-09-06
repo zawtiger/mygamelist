@@ -3,8 +3,8 @@
 class DatabaseConfig
 {
   const
-  DB_HOST = 'localhost',
-  DB_NAME = 'mygames',
-  DB_USER = 'mygames',
-  DB_PASS = 'mYwl5HmV6pRVVPDV';
+  DB_HOST = '', //DB host
+  DB_NAME = '', //DB Name 
+  DB_USER = '', //DB user name
+  DB_PASS = ''; // DB password
 }
