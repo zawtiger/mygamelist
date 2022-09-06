@@ -24,7 +24,7 @@ The application will be using PHP and mySQL.
 
 3) Run the "install.sql". There are two options.
 
-  a) You can use phpMyAdmin or other admin tools to administer your database to import the "install.sql" file.
+  a) phpMyAdmin or other admin tools can be used to administer your database to import the "install.sql" file.
   or
   b) On command line: `mysql -u [user] -p < install.sql`
 
@@ -48,9 +48,8 @@ The application will be using PHP and mySQL.
 <li>
 <p><b>Add Pagination, as there will be millions of records.</b> I have it almost in place, just didn't have the time.
 By default, the current limit is set to show 10 records at a time. At each request to load the game list, there will be two queries. The first is to get a total count of the results. The total results can be different when filters and searches are involved. The second query will load the actual data with the limit implemented. The values will be saved in $_SESSION.</p>
-</li>
 
-  <li><p>Here is why $_SESSIONs are great. Firstly they are on the server side, unlike using cookies, they are safer (just don't reveal the session number to the public). They can hold arrays multidimensions of data and even blobs, and I use them to cache results, temp files and global variables that can hold data over different pages.</p>
+<p>Here is why $_SESSIONs are great. Firstly they are on the server side, unlike using cookies, they are safer (just don't reveal the session number to the public). They can hold arrays multidimensions of data and even blobs, and I use them to cache results, temp files and global variables that can hold data over different pages.</p>
 
   <p>In our case we can use them to store the total number of records, the amount of records to load, and the current page.</p>
 
@@ -86,25 +85,30 @@ By default, the current limit is set to show 10 records at a time. At each reque
 </ol>
 
 ## Features that would be cool
--I would implement the feature to upload and display thumbnails of game titles. (This will involve uploading images, cropping and resizing).
--Link to the Steam or GOG library if anyone clicks on it.
--Filter by genres.
--User login system. You won't want others randomly editing 'your' list of games while you want others be able use the search.
+
+<ul>
+<li>I would implement the feature to upload and display thumbnails of game titles. (This will involve uploading images, cropping and resizing).</li>
+<li>Link to the Steam or GOG library if anyone clicks on it.</li>
+<li>Filter by genres.</li>
+<li>User login system. You won't want others randomly editing 'your' list of games while you want others be able use the search.</li>
+</ul>
 
 # Things that were done
 
 ## Cleaning
 Data entered on the server end is sanitized using placeholders by using `PDO::prepare()` and `PDOStatement::execute()`.
-On the PHP end, I could of converted the $_POST variables to the correct data types. For example, the rating values are integers. So an example would be `$rating = (int)$_POST['rating'];`
+On the PHP end, I could of converted the $_POST variables to the correct data types. For instance, the rating values are integers, therefore an example would be `$rating = (int)$_POST['rating'];`
 
 ## Validation
 Two steps in the validation process.
-1) Validation client side to ensure the required data is not left blank or wrong values being entered with instant feedback.
-2) Additional validation on the server side to ensure no duplicates are entered.
+<ol>
+<li>Validation client side to ensure the required data is not left blank or wrong values being entered with instant feedback.</li>
+<li>Additional validation on the server side to ensure no duplicates are entered.</li>
+</ol>
 
 ## Scaling or Failing
 If installation is done correctly, a finished version of this project can stand on its own (given some updates required over time).
-The project at this point is incomplete, and would not scale.
+The project at this point is incomplete, and would not scale as is.
 
 ## Let's Talk Data
 
@@ -130,6 +134,8 @@ NULL was assigned to `nickname` and `rating` since they can be NULL.
 <p>Honestly this is my first time using GitHub.</p>
 
 <p>A decision was made to use CDN for Bootstrap in place to Composer Packagist. In the interest of time decided to go with CDN link because staging, committing, and pushing the files and dependencies to GitHub was taking too long.</p>
+
+<p>In addition to Bootstrap, jQuery CDN was used. I've also used my premade snippets that I normally use for my projects to increase efficiency.</p>
 
 <p>Curious to know what strange paradigm and framework was used? It is MVC with Ajax (to update the contents without reloading the page) with a custom framework.</p>
 
