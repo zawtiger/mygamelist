@@ -8,17 +8,19 @@ The application will be using PHP and mySQL.
 # Installation
 
 1) First clone the repo.
-2) Edit the /Model/DatabaseConfig.php
+2) Edit the <i>/Model/DatabaseConfig.php</i>
 
-  `class DatabaseConfig<br>
+  <blockquote>
+  <i>
+  class DatabaseConfig<br>
   {<br>
     const
     DB_HOST = '(the host name to your mySQL here)',<br>
     DB_NAME = '(the name of the database here)',<br>
     DB_USER = '(user name to connect to this database)',<br>
     DB_PASS = '(the password to connect to this database)';<br>
-  }<br>
-  `
+  }</i>
+  </blockquote>
 
 3) Run the "install.sql". There are two options.
 
@@ -57,7 +59,7 @@ By default, the current limit is set to show 10 records at a time. At each reque
   $_SESSION['records_per_page'];<br>
   $_SESSION['current_page'];<br>
   $_SESSION['total_num_of_pages'];<br>
-  <blockquote>
+  </blockquote>
 
   <p>In the query it would be `LIMIT BY $_SESSION['current_records'], $_SESSION['records_per_page']`;</p>
 
