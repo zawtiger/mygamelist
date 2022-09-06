@@ -12,7 +12,7 @@ The application will be using PHP version 5+ with mySQL.
 
   <li>Edit the <i>/Model/DatabaseConfig.php</i> and enter your own database and login information.
 
-    class DatabaseConfig<br>
+    class DatabaseConfig
     {
       const
       DB_HOST = '(the host name to your mySQL here)',
