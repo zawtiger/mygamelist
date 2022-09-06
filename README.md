@@ -12,26 +12,20 @@ The application will be using PHP version 5+ with mySQL.
 
   <li>Edit the <i>/Model/DatabaseConfig.php</i> and enter your own database and login information.
 
-    <blockquote>
-    <i>
     class DatabaseConfig<br>
-    {<br>
+    {
       const
-      DB_HOST = '(the host name to your mySQL here)',<br>
-      DB_NAME = '(the name of the database here)',<br>
-      DB_USER = '(user name to connect to this database)',<br>
-      DB_PASS = '(the password to connect to this database)';<br>
-    }</i>
-    </blockquote>
+      DB_HOST = '(the host name to your mySQL here)',
+      DB_NAME = '(the name of the database here)',
+      DB_USER = '(user name to connect to this database)',
+      DB_PASS = '(the password to connect to this database)';
+    }
+
   </li>
 
 
   <li>Run the "install.sql". There are two options.
-
-    <blockquote>
     The first option is using phpMyAdmin or other admin tools can be used to administer your database to import the "install.sql" file. The other options is importing the file using the command line: `mysql -u [user] -p < install.sql`
-    </blockquote>
-
   </li>
 </ol>
 
